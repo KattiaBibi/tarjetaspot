@@ -14,7 +14,7 @@ class Test extends BaseController
 {
 	public function index()
 	{
-		// return view('test/index');
+		return view('test/index');
 
 		helper('datos_tarjeta');
 		$d = model('UsuarioModel')->getForTarjetaDigital(12);

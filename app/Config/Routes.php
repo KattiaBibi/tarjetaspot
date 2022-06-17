@@ -145,6 +145,7 @@ $routes->group('/', ['namespace' => 'App\Controllers\Presenters', 'filter' => 'A
   $routes->get('multimedia/videos', 'Multimedia::videos');
   $routes->get('multimedia/imagenes', 'Multimedia::imagenes');
   $routes->get('apariencia', 'Apariencia::index');
+  $routes->get('test', 'Test::index');
 });
 
 $routes->get('ingresar', 'Usuario::ingresar', ['namespace' => 'App\Controllers\Presenters']);
