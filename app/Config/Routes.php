@@ -149,6 +149,7 @@ $routes->group('/', ['namespace' => 'App\Controllers\Presenters', 'filter' => 'A
 });
 
 $routes->get('ingresar', 'Usuario::ingresar', ['namespace' => 'App\Controllers\Presenters']);
+$routes->get('registrate', 'Usuario::registrate', ['namespace' => 'App\Controllers\Presenters']);
 // $routes->get('test', 'Test::index', ['namespace' => 'App\Controllers\Presenters']);
 // $routes->get('testEmail', 'Test::testEmail', ['namespace' => 'App\Controllers\Presenters']);
 // $routes->get('usuario/test', 'Usuario::test', ['namespace' => 'App\Controllers\Presenters']);
