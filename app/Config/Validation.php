@@ -43,7 +43,7 @@ class Validation
 	public $registroUsuario = [
 		'id_empresa' => [
 			'label' => 'empresa',
-			'rules' => 'required|is_not_unique[empresa.id]'
+			'rules' => 'permit_empty|is_not_unique[empresa.id]'
 		],
 		'nombres' => [
 			'label' => 'nombres',

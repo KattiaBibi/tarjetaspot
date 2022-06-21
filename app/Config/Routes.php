@@ -36,6 +36,7 @@ $routes->get('/', 'TarjetaDigital::index/kidsalud/jorge-cespedes', ['namespace' 
 $routes->post('api/v1/acceso/login', 'Acceso::login', ['namespace' => 'App\Controllers\API\v1']);
 $routes->get('api/v1/acceso/notAuthorized', 'Acceso::notAuthorized', ['namespace' => 'App\Controllers\API\v1']);
 $routes->post('api/v1/enviar-email/enviar-vcard', 'EnviarEmail::EnviarVCard', ['namespace' => 'App\Controllers\API\v1']);
+$routes->post('api/v1/registrate', 'Usuario::create', ['namespace' => 'App\Controllers\API\v1']);
 
 // 'filter' => 'AccesoAPI'
 $routes->group('api/v1', ['namespace' => 'App\Controllers\API\v1', 'filter' => 'AccesoAPI'], function ($routes) {

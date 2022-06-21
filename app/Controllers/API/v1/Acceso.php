@@ -20,7 +20,7 @@ class Acceso extends ResourceController
       return $this->fail($validation->getErrors());
     }
 
-    $usuario_db = $this->model->where('email', $usuario['email'])->where('rol', 'administrador')->first();
+    $usuario_db = $this->model->where('email', $usuario['email'])->first();
     if ($usuario_db && password_verify($usuario['password'], $usuario_db['password_hash'])) {
       $datosUsuario = model('DatosUsuarioModel')->where('id_usuario', $usuario_db['id'])->first();
       $usuario_db['is_logged'] = true;
