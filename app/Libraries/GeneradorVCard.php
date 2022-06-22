@@ -24,7 +24,7 @@ class GeneradorVCard
 		$vcard->addName($lastname, $firstname, $additional, $prefix, $suffix);
 
 		// add work data
-		$vcard->addCompany($d['empresa']['nombre']);
+		$vcard->addCompany($d['empresa']['nombre'] ?? null);
 		$vcard->addJobtitle($d['datosUsuario']['puesto']);
 		$vcard->addRole($d['datosUsuario']['puesto']);
 

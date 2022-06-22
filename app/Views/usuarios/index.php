@@ -12,9 +12,11 @@
       <div class="card">
         <div class="card-header bg-primary text-white"><strong>Tabla de Usuarios</strong></div>
         <div class="card-body">
-          <div class="mb-3">
-            <button class="btn btn-success btn-sm" id="btnNuevoUsuario">NUEVO USUARIO</button>
-          </div>
+          <?php if (session('usuarioLogueado.rol') === 'administrador') : ?>
+            <div class="mb-3">
+              <button class="btn btn-success btn-sm" id="btnNuevoUsuario">NUEVO USUARIO</button>
+            </div>
+          <?php endif; ?>
           <div class="table-responsive">
             <table class="table table-bordered table-sm text-center" id="tablaUsuarios" width="100%" cellspacing="0">
               <thead>
@@ -115,7 +117,6 @@
             <div class="form-group">
               <label for="_inputEmpresa"><strong>Empresa</strong></label>
               <select name="id_empresa" id="_inputEmpresa" class="form-control form-control-sm">
-                <option value="" selected>-- SELECCIONAR --</option>
               </select>
             </div>
             <div class="form-row">
@@ -150,7 +151,8 @@
                 </div>
               </div>
             </div>
-            <div class="form-group">
+
+            <div class="form-group" style="display: <?= (session('usuarioLogueado.rol') === 'administrador') ? 'block' : 'none'; ?>">
               <label for="_inputEstado"><strong>Estado</strong></label>
               <select id="_inputEstado" name="estado" class="form-control form-control-sm">
                 <option value="">-- SELECCIONAR --</option>
@@ -158,6 +160,7 @@
                 <option value="0">INACTIVO</option>
               </select>
             </div>
+
             <div class="form-group mt-4 mb-0">
               <input type="submit" class="btn btn-success btn-sm" id="_btnGuardar" value="Guardar">
               <button class="btn btn-secondary btn-sm" id="btnVolverFrmEditar">Volver</button>
@@ -184,7 +187,9 @@
         <button class="btn btn-primary btn-sm btn-block" id="btnEditar">Editar</button>
         <button class="btn btn-primary btn-sm btn-block" id="btnEdicionCompleta">Edición Completa</button>
         <button class="btn btn-primary btn-sm btn-block" id="btnVerTarjeta">Ver Tarjeta</button>
-        <button class="btn btn-primary btn-sm btn-block" id="btnEliminar">Eliminar</button>
+        <?php if (session('usuarioLogueado.rol') === 'admnistrador') : ?>
+          <button class="btn btn-primary btn-sm btn-block" id="btnEliminar">Eliminar</button>
+        <?php endif; ?>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -325,7 +330,7 @@
       });
     });
 
-    btnEliminar.addEventListener('click', function() {
+    $('#btnEliminar').on('click', function() {
       $('#modalAcciones').modal('hide');
       alertify.confirm("Eliminar", "¿Esta seguro de eliminar?",
         function() {
@@ -350,7 +355,7 @@
       window.open(`${BASE_URL}/usuario/ver-tarjeta/${fila.id}`, '_blank');
     });
 
-    btnNuevoUsuario.addEventListener('click', function(e) {
+    $('#btnNuevoUsuario').on('click', function(e) {
       Utils.toggleSeccion(seccionTablaUsuarios, seccionFrmRegistrarUsuario);
     });
 

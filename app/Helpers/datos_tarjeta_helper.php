@@ -114,12 +114,20 @@ function getPrefijo($telefono, $modo)
 
 function encodeLinkTarjeta($d, $msg = null)
 {
-	return urlencode($msg . base_url() . "/" . $d['empresa']['slug'] . "/" . $d['datosUsuario']['slug']);
+	if ($d["empresa"]) {
+		return urlencode($msg . base_url() . "/" . $d['empresa']['slug'] . "/" . $d['datosUsuario']['slug']);
+	}
+
+	return urlencode($msg . base_url() . "/" . $d['datosUsuario']['slug']);
 }
 
 function getLinkTarjeta($d)
 {
-	return base_url($d['empresa']['slug'] . "/" . $d['datosUsuario']['slug']);
+	if ($d["empresa"]) {
+		return base_url($d['empresa']['slug'] . "/" . $d['datosUsuario']['slug']);
+	}
+
+	return base_url($d['datosUsuario']['slug']);
 }
 
 function getQr($d)

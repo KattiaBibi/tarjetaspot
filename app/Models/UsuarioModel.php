@@ -72,6 +72,10 @@ class UsuarioModel extends Model
 
 	private function getFilters($filters)
 	{
+		if (isset($filters['id']) && $filters['id'] !== '') {
+			$this->builder()->where('usuario.id', $filters['id']);
+		}
+
 		if (isset($filters['rol']) && $filters['rol'] !== '') {
 			$this->builder()->where('rol', $filters['rol']);
 		}

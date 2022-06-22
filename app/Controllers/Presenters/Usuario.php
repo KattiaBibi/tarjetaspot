@@ -18,6 +18,8 @@ class Usuario extends BaseController
 		helper('datos_tarjeta');
 		$datosUsuario = model('UsuarioModel')->getForTarjetaDigital($id);
 		
+		// dd($datosUsuario);
+
 		$generadorVCard = new GeneradorVCard();
     $qrVcardImg = $generadorVCard->generarVcard($datosUsuario, 'QR');
 
@@ -74,7 +76,7 @@ class Usuario extends BaseController
 
 	public function test()
 	{
-		// var_dump(session()->get());
+		dd(session()->get());
 		// echo "<pre>";
 		// var_dump(model('UsuarioModel')->getAllUserData(2));
 		// echo "</pre>";

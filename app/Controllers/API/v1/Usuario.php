@@ -20,6 +20,10 @@ class Usuario extends ResourceController
 		$offset = $this->request->getGet('start');
 		$filters = $this->request->getGet('filters');
 
+		if (session('usuarioLogueado.rol') === 'usuario') {
+			$filters['id'] = session('usuarioLogueado.id');
+		}
+
 		$recordsTotal = $this->model->countAllResults();
 		$recordsFiltered = $this->model->getTotalRowsFiltered($filters);
 
