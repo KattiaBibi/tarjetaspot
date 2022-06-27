@@ -65,13 +65,13 @@ class Usuario extends BaseController
 	{
 		$usuario = model('UsuarioModel')->show($id);
 		session()->set('actualUserUpdate', (array) $usuario);
-		return redirect()->to(base_url('/usuarios'));
+		return redirect()->to(base_url('/datos-personales'));
 	}
 
 	public function deleteActualUserUpdate()
 	{
 		session()->remove('actualUserUpdate');
-		return redirect()->to(base_url('/usuarios'));
+		return redirect()->to(base_url((session('usuarioLogueado.rol') === 'administrador') ? '/usuarios' : '/miPerfil'));
 	}
 
 	public function test()

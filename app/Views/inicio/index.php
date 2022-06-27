@@ -11,7 +11,7 @@
   <p class="lead">Aqui podras crear tu tarjeta digital con tus datos personales, informacion de contacto, multimedia, etc.</p>
   <hr class="my-4">
   <p>Empieza ahora a editar tu tarjeta digital!</p>
-  <a class="btn btn-primary btn-lg" href="<?= base_url('usuarios') ?>" role="button">Comienza Ahora!</a>
+  <a class="btn btn-primary btn-lg" href="<?= base_url((session('usuarioLogueado.rol') === 'administrador') ? 'usuarios' : 'miPerfil') ?>" role="button">Comienza Ahora!</a>
 </div>
 
 <?= $this->endSection() ?>

@@ -31,7 +31,10 @@ $routes->setAutoRoute(false);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'TarjetaDigital::index/kidsalud/jorge-cespedes', ['namespace' => 'App\Controllers\Presenters']);
+
+// $routes->get('/', 'TarjetaDigital::index/kidsalud/jorge-cespedes', ['namespace' => 'App\Controllers\Presenters']);
+
+$routes->addRedirect('/', 'ingresar');
 
 $routes->post('api/v1/acceso/login', 'Acceso::login', ['namespace' => 'App\Controllers\API\v1']);
 $routes->get('api/v1/acceso/notAuthorized', 'Acceso::notAuthorized', ['namespace' => 'App\Controllers\API\v1']);
@@ -132,6 +135,7 @@ $routes->group('/', ['namespace' => 'App\Controllers\Presenters', 'filter' => 'A
   $routes->get('inicio', 'Inicio::index');
   $routes->get('empresas', 'Empresa::index');
   $routes->get('usuarios', 'Usuario::index');
+  $routes->get('miPerfil', 'Usuario::index');
   $routes->get('usuario/ver-tarjeta/(:num)', 'Usuario::verTarjeta/$1');
   $routes->get('usuario/set-actual-user-update/(:num)', 'Usuario::setActualUserUpdate/$1');
   $routes->get('usuario/delete-actual-user-update', 'Usuario::deleteActualUserUpdate');

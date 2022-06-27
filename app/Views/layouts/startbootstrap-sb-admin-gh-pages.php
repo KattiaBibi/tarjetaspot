@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <title>Tarjeta Digital</title>
+  <title>Tarjetaspot</title>
 
   <link href="<?= base_url('css/styles.css') ?>" rel="stylesheet" />
 
@@ -45,13 +45,16 @@
               Inicio
             </a>
 
-            <a class="nav-link" href="<?= base_url('empresas') ?>">
+            <?php if (session('usuarioLogueado.rol') === 'administrador') : ?>
+              <a class="nav-link" href="<?= base_url('empresas') ?>">
+                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                Empresas
+              </a>
+            <?php endif; ?>
+
+            <a class="nav-link" href="<?= base_url((session('usuarioLogueado.rol') === 'administrador') ? 'usuarios' : 'miPerfil') ?>">
               <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-              Empresas
-            </a>
-            <a class="nav-link" href="<?= base_url('usuarios') ?>">
-              <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-              Usuarios
+              <?= (session('usuarioLogueado.rol') === 'administrador') ? 'Usuarios' : 'Mi Perfil' ?>
             </a>
 
             <?php if (session()->has('actualUserUpdate')) : ?>

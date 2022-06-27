@@ -1,16 +1,16 @@
 <?= $this->extend('layouts/startbootstrap-sb-admin-gh-pages') ?>
 <?= $this->section('content') ?>
-<h1 class="mt-4">Usuarios</h1>
+<h1 class="mt-4"><? (session('usuarioLogueado.rol') === 'administrador') ? 'Usuarios' : 'Mi Perfil' ?></h1>
 <ol class="breadcrumb mb-4">
   <li class="breadcrumb-item"><a href="<?= base_url('inicio') ?>">Inicio</a></li>
-  <li class="breadcrumb-item active">Usuarios</li>
+  <li class="breadcrumb-item active"><?= (session('usuarioLogueado.rol') === 'administrador') ? 'Usuarios' : 'Mi Perfil' ?></li>
 </ol>
 
 <div id="seccionTablaUsuarios">
   <div class="row">
     <div class="col-12">
       <div class="card">
-        <div class="card-header bg-primary text-white"><strong>Tabla de Usuarios</strong></div>
+        <div class="card-header bg-primary text-white"><strong><?= (session('usuarioLogueado.rol') === 'administrador') ? 'Tabla Usuarios' : 'Mi Perfil' ?></strong></div>
         <div class="card-body">
           <?php if (session('usuarioLogueado.rol') === 'administrador') : ?>
             <div class="mb-3">
@@ -110,15 +110,17 @@
   <div class="row">
     <div class="col-lg-6 col-12">
       <div class="card">
-        <div class="card-header bg-primary text-white"><strong>Registrar Usuario</strong></div>
+        <div class="card-header bg-primary text-white"><strong>Editar <?= (session('usuarioLogueado.rol') === 'administrador') ? 'Usuario' : 'Mi Perfil' ?></strong></div>
         <div class="card-body">
           <form id="frmEditarUsuario">
             <input type="hidden" id="_inputId">
-            <div class="form-group">
+
+            <div class="form-group" style="display: <?= (session('usuarioLogueado.rol') === 'administrador') ? 'block' : 'none'; ?>">
               <label for="_inputEmpresa"><strong>Empresa</strong></label>
               <select name="id_empresa" id="_inputEmpresa" class="form-control form-control-sm">
               </select>
             </div>
+
             <div class="form-row">
               <div class="col-md-6">
                 <div class="form-group">
@@ -215,6 +217,7 @@
       ordering: false,
       processing: true,
       serverSide: true,
+      info: '<?= (session('usuarioLogueado.rol') === 'administrador') ? true : false ?>',
       ajax: {
         url: `${BASE_URL}/api/v1/usuarios`,
         type: "GET",
