@@ -40,7 +40,7 @@
                       </div>
                     </div>
                     <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                      <a class="small" href="#">¿Olvidates tu contraseña?</a>
+                      <a class="small" href="<?= base_url('registrate') ?>">Registrate</a>
                       <input type="submit" class="btn btn-primary" value="Ingresar">
                     </div>
                     <div class="validaciones mt-2"></div>

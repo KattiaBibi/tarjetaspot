@@ -3347,7 +3347,7 @@
 
 									<div id="infobutton-content" style="display:none;">
 										<div style="padding:5px 7px 13px 7px; color:rgba(0,0,0,0.60);">
-											tarjetita.vip no se responsabiliza necesariamente de los contenidos a los que se pueda acceder a
+											tarjetaspot.com no se responsabiliza necesariamente de los contenidos a los que se pueda acceder a
 											trav&eacute;s de este servicio. La organizaci&oacute;n que contrat&oacute; nuestros servicios y en
 											su caso el titular del mismo son los que tiene exclusiva responsabilidad sobre lo que publican o
 											enlazan. </div>
@@ -3361,7 +3361,7 @@
 												width="83" height="20" border="0" title="BHybrid"
 												style="opacity:0.50; vertical-align:middle;padding-left:2px;padding-right:2px;" /></a> -->
 
-										<a href="http://tarjetita.vip/CEmpresarial/WC" style="color:rgba(0,0,0,0.70);font-weight:bold;font-size:12px;text-decoration:none;">tarjetita.vip</a>
+										<a href="http://tarjetaspot.com/" style="color:rgba(0,0,0,0.70);font-weight:bold;font-size:12px;text-decoration:none;">tarjetaspot.com</a>
 										&nbsp;&nbsp;&nbsp;
 										<span id="infobuttonblock" class="cursorhand"><i class="fas fa-info" id="infobutton" style="color:rgba(0,0,0,0.40);border:1px solid rgba(0,0,0,0.11);padding:8px 12px;border-radius:3px;"></i></span>
 
