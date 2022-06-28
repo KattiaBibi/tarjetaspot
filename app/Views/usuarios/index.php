@@ -224,7 +224,7 @@
         data: function(d) {
           return $.extend({}, d, {
             "filters": {
-              "rol": "usuario",
+              // "rol": "usuario",
             }
           });
         }

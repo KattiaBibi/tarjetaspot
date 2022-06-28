@@ -206,10 +206,9 @@ CREATE TABLE IF NOT EXISTS apariencia (
 
 -- password='waldir2021'
 -- ADMINSTRADOR
-INSERT INTO `usuario` (`id`, `id_empresa`, `email`, `password_hash`, `rol`, `created_at`, `updated_at`, `estado`) VALUES (NULL, NULL, 'waldircastillo@hotmail.com', '$2y$10$fcuGZEFSGIkH4y6JZWIoueIB0Y9NDsvv0CRJ2lpHeH6Sm26/C9Cmi', 'administrador', NOW(), NOW(), 1);
+INSERT INTO `usuario` (`id`, `id_empresa`, `email`, `password_hash`, `rol`, `created_at`, `updated_at`, `estado`) VALUES (NULL, NULL, 'jrivas@compusistel.com', '$2y$10$6yubEnbMLhC7cxYuDj8PxO1goZvx31HOI6Vyj1o7D9A7zUMxQeR.y', 'administrador', NOW(), NOW(), 1);
 
-INSERT INTO `datos_usuario` (`id`, `id_usuario`, `slug`, `nombres`, `apellidos`, `puesto`, `pagina_web`, `fecha_nacimiento`, `genero`, `url_foto_de_perfil`, `acerca_de_mi`, `inicio`, `horarios_atencion`, `educacion`, `experiencia`, `servicios`) VALUES (NULL, '1', 'waldir-castillo-ortiz', 'Waldir', 'Castillo Ortiz', '', '', NULL, NULL, '', '', '', '', '', '', '');
-
+INSERT INTO `datos_usuario` (`id`, `id_usuario`, `slug`, `nombres`, `apellidos`, `puesto`, `pagina_web`, `fecha_nacimiento`, `genero`, `url_foto_de_perfil`, `acerca_de_mi`, `inicio`, `horarios_atencion`, `educacion`, `experiencia`, `servicios`) VALUES (NULL, '1', 'janina-rivas-cabrejos', 'Janina', 'Rivas Cabrejos', '', '', NULL, NULL, '', '', '', '', '', '', '');
 
 INSERT INTO `tipo_localizacion` (`id`, `descripcion`) VALUES (NULL, 'TRABAJO'), (NULL, 'CASA');
 
@@ -218,3 +217,7 @@ INSERT INTO `tipo_red_social` (`id`, `descripcion`) VALUES (NULL, 'Facebook'), (
 INSERT INTO `tipo_correo_electronico` (`id`, `descripcion`) VALUES (NULL, 'Outlook'), (NULL, 'Gmail'), (NULL, 'Yahoo!'), (NULL, 'Hotmail');
 
 INSERT INTO `tipo_telefono` (`id`, `descripcion`) VALUES (NULL, 'Teléfono Central'), (NULL, 'Móvil');
+
+-- DB: tarjetaspot_app
+-- USER: tarjetaspot_app
+-- PASSWORD: O$bn@ckP62QD

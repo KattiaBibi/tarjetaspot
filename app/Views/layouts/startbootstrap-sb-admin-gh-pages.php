@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="" />
   <meta name="author" content="" />
+  <link rel="icon" href="<?= base_url('images/logo.png') ?>" type="image/x-icon">
   <title>Tarjetaspot</title>
 
   <link href="<?= base_url('css/styles.css') ?>" rel="stylesheet" />
@@ -130,11 +131,11 @@
       <footer class="py-4 bg-light mt-auto">
         <div class="container-fluid">
           <div class="d-flex align-items-center justify-content-between small">
-            <div class="text-muted">Copyright &copy; Your Website 2021</div>
+            <div class="text-muted">© <?= date('Y-m-d') ?> Todos los derechos reservados por COMPUSISTEL SAC.</div>
             <div>
-              <a href="#">Privacy Policy</a>
+              <a href="#">Politicas de privacidad</a>
               &middot;
-              <a href="#">Terms &amp; Conditions</a>
+              <a href="#">Términos &amp; Condiciones</a>
             </div>
           </div>
         </div>
