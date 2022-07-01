@@ -143,7 +143,7 @@ class Validation
 		],
 		'foto_perfil' => [
 			'label' => 'foto de perfil',
-			'rules' => 'uploaded[foto_perfil]|is_image[foto_perfil]|max_size[foto_perfil,2048]|max_dims[foto_perfil,300,300]',
+			'rules' => 'uploaded[foto_perfil]|is_image[foto_perfil]|max_size[foto_perfil,2048]|max_dims[foto_perfil,500,500]',
 			'errors' => [
 				'uploaded' => 'El campo foto de perfil es un campo obligatorio',
 				'is_image' => 'El campo foto de perfil debe ser una imagen'

@@ -46,7 +46,7 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="inputFotoPerfil"><strong>Foto de perfil</strong> (300px * 300px - 2MB max.)</label>
+            <label for="inputFotoPerfil"><strong>Foto de perfil</strong> (500px * 500px - 2MB max.)</label>
             <input type="file" class="form-control" id="inputFotoPerfil" name="foto_perfil">
             <div class="text-center py-3">
               <img id="vistaPreviaFotoPerfil" src="" alt="Vista Previa" style="max-width:250px" />
