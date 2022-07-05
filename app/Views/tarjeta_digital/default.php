@@ -3,7 +3,7 @@
 
 <head>
 
-	<meta property="og:site_name" content="KIDSALUD" />
+	<meta property="og:site_name" content="TarjetaSpot" />
 
 	<title><?= getNomApe($d) ?></title>
 	<meta name="description" content="<?= $d['datosUsuario']['puesto'] ?>" />

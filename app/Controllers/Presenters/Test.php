@@ -81,4 +81,20 @@ class Test extends BaseController
 		$generadorCorreo = new GeneradorCorreo();
 		$generadorCorreo->enviarVCard($d, "elbooz30@hotmail.com");
 	}
+
+	public function testResizeImage()
+	{
+		$x_file = new \CodeIgniter\Files\File('images/fotos_perfil/1656704544_2b75aec1191222ebfe28.jpg');
+
+		// dd($x_file);
+
+		$image = \Config\Services::image()
+			->withFile($x_file)
+			->resize(200, 200, true, 'height')
+			->save(FCPATH . '/images/' . $x_file->getRandomName());
+		
+		dd($image);
+
+		// $x_file->move(WRITEPATH . 'uploads');
+	}
 }

@@ -157,6 +157,7 @@ $routes->get('ingresar', 'Usuario::ingresar', ['namespace' => 'App\Controllers\P
 $routes->get('registrate', 'Usuario::registrate', ['namespace' => 'App\Controllers\Presenters']);
 // $routes->get('test', 'Test::index', ['namespace' => 'App\Controllers\Presenters']);
 // $routes->get('testEmail', 'Test::testEmail', ['namespace' => 'App\Controllers\Presenters']);
+$routes->get('testResizeImage', 'Test::testResizeImage', ['namespace' => 'App\Controllers\Presenters']);
 $routes->get('usuario/test', 'Usuario::test', ['namespace' => 'App\Controllers\Presenters']);
 
 $routes->get('descargar-vcard/(:segment)', 'TarjetaDigital::descargarVCard/$1', ['namespace' => 'App\Controllers\Presenters']);
