@@ -167,3 +167,20 @@ function getRutaBanner($d)
 
 	return false;
 }
+
+function getEdad($d)
+{
+	$edad = '-';
+	if ($d['datosUsuario']['fecha_nacimiento'] != null) {
+		$fecha_nacimiento = new DateTime($d['datosUsuario']['fecha_nacimiento']);
+		$hoy = new DateTime();
+		$edad = $hoy->diff($fecha_nacimiento)->y;
+	}
+
+	return $edad;
+}
+
+function getTextDerechosReservados()
+{
+	return '<div class="copyRight">&copy; ' . date('Y') . ' Todos los Derechos Reservados <a href="http://tarjetaspot.com" target="_blank">tarjetaspot.com</a></div>';
+}

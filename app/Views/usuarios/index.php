@@ -50,7 +50,6 @@
             <div class="form-group">
               <label for="inputEmpresa"><strong>Empresa</strong></label>
               <select name="id_empresa" id="inputEmpresa" class="form-control form-control-sm">
-                <option value="" selected>-- SELECCIONAR --</option>
               </select>
             </div>
             <div class="form-row">

@@ -100,6 +100,8 @@
     const BASE_URL = '<?= base_url() ?>';
   </script>
 
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
   <script src="<?= base_url('js/Utils.js') ?>"></script>
   <script src="<?= base_url('js/API/AccesoAPI.js') ?>"></script>
 

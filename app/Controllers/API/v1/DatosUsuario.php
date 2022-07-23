@@ -44,8 +44,6 @@ class DatosUsuario extends ResourceController
 			}
 
 			$datosUsuario = $this->request->getPost();
-			$datosUsuario['fecha_nacimiento'] = $datosUsuario['fecha_nacimiento'] = '0000-00-00' ?
-				null : $datosUsuario['fecha_nacimiento'];
 			$foto_perfil = $this->request->getFile('foto_perfil');
 
 			$datosUsuario['id_usuario'] = $id_usuario;

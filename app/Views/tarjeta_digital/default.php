@@ -2361,6 +2361,8 @@
 								<div id="cardextracontent-inside">
 									<div class="cardextracontentblock">
 
+									<?php if(getVideoPresentacion($d) !== '#'): ?>
+
 										<div style="margin-bottom: 30px;">
 											<div class="cardextracontenttitle" style="color: <?= getColorApariencia($d) ?>;">Presentación</div>
 											<div style="border:0px solid rgba(0,0,0,0.15);">
@@ -2378,6 +2380,7 @@
 
 											</div>
 										</div>
+									<?php endif; ?>
 
 										<?php if (!empty(trim($d['datosUsuario']['acerca_de_mi']))) : ?>
 											<div style="margin-bottom: 30px;">

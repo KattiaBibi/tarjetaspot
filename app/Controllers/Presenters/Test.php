@@ -84,17 +84,25 @@ class Test extends BaseController
 
 	public function testResizeImage()
 	{
-		$x_file = new \CodeIgniter\Files\File('images/fotos_perfil/1656704544_2b75aec1191222ebfe28.jpg');
+		// $x_file = new \CodeIgniter\Files\File('images/fotos_perfil/1656704544_2b75aec1191222ebfe28.jpg');
 
-		// dd($x_file);
+		// // dd($x_file);
 
-		$image = \Config\Services::image()
-			->withFile($x_file)
-			->resize(200, 200, true, 'height')
-			->save(FCPATH . '/images/' . $x_file->getRandomName());
+		// $image = \Config\Services::image()
+		// 	->withFile($x_file)
+		// 	->resize(200, 200, true, 'height')
+		// 	->save(FCPATH . '/images/' . $x_file->getRandomName());
 		
-		dd($image);
+		// dd($image);
 
 		// $x_file->move(WRITEPATH . 'uploads');
+
+		helper('datos_tarjeta');
+
+		$datosUsuario = model('UsuarioModel')->getForTarjetaDigital(10);
+
+		// dd($datosUsuario);
+
+		return view('tarjeta_digital/Bittanto_Package/dark/index', ['d' => $datosUsuario]);
 	}
 }
