@@ -244,6 +244,16 @@
                             <div class="container-fluid">
                                 <h2 class="sectionTitle">Empresa</h2>
                             </div>
+                            <div class="row">
+                                <div class="col-8 mx-auto mb-3">
+                                    <img src="<?= base_url($d['datosEmpresa']['url_imagen']) ?>" alt="imagen de empresa" class="img-fluid">
+                                </div>
+                                <div class="col-12">
+                                    <div class="abContent">
+                                        <?= $d['datosEmpresa']['descripcion'] ?>
+                                    </div>
+                                </div>
+                            </div>
                         </section>
                         <footer class="footer">
                             <div class="container-fluid">
@@ -417,6 +427,19 @@
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <h2 class="sectionTitle">Compartir</h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <h2 class="sectionTitle" style="font-size: 15px; margin-bottom: 10px;">Compartir en redes sociales</h2>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="psSocial" style="position: initial; padding: 0;">
+                                            <a href="<?= getRedSocial($d, 'Facebook') ?>" target="_blank" class="fac"><i class="icofont-facebook"></i></a>
+                                            <a href="<?= getRedSocial($d, 'Twitter') ?>" target="_blank" class="twi"><i class="icofont-twitter"></i></a>
+                                            <a href="<?= getRedSocial($d, 'Linkedin') ?>" target="_blank" style="background-color: #0e76a8;"><i class="icofont-linkedin"></i></a>
+                                            <a href="<?= getRedSocial($d, 'Instagram') ?>" target="_blank" class="ins"><i class="icofont-instagram"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

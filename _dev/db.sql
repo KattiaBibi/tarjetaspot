@@ -221,3 +221,15 @@ INSERT INTO `tipo_telefono` (`id`, `descripcion`) VALUES (NULL, 'Teléfono Centr
 -- DB: tarjetaspot_app
 -- USER: tarjetaspot_app
 -- PASSWORD: O$bn@ckP62QD
+
+CREATE TABLE categoria_multimedia (
+  id int AUTO_INCREMENT,
+  descripcion varchar(100) not null,
+  PRIMARY KEY(id)
+)engine=innoDB;
+
+ALTER TABLE imagenes ADD COLUMN id_categoria_multimedia int NOT NULL;
+ALTER TABLE imagenes ADD CONSTRAINT FOREIGN KEY(id_categoria_multimedia) REFERENCES(categoria_multimedia.id)
+
+ALTER TABLE videos ADD COLUMN id_categoria_multimedia int NOT NULL;
+ALTER TABLE videos ADD CONSTRAINT FOREIGN KEY(id_categoria_multimedia) REFERENCES(categoria_multimedia.id)
